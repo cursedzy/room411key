@@ -563,7 +563,6 @@
             if (intersects.length > 0) {
                 const clicked = intersects[0].object;
                 if (clicked.userData.type === 'prev') {
-                    // Visual feedback
                     clicked.material.color.setHex(0x444444);
                     setTimeout(() => clicked.material.color.setHex(0x2a2a2a), 150);
                     changeChannel('prev');
@@ -594,7 +593,6 @@
             targetRotation.y += deltaMove.x * 0.005;
             targetRotation.x += deltaMove.y * 0.003;
 
-            // Clamp vertical rotation
             targetRotation.x = Math.max(-0.3, Math.min(0.3, targetRotation.x));
 
             previousMousePosition = {
